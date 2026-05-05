@@ -5,28 +5,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const navLinksItems = document.querySelectorAll('.nav-links a');
 
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    const toggleMenu = () => {
+        const isActive = navLinks.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        document.body.style.overflow = isActive ? 'hidden' : '';
+        
+        mobileMenuBtn.setAttribute('aria-expanded', isActive);
         const icon = mobileMenuBtn.querySelector('i');
-        if (navLinks.classList.contains('active')) {
+        
+        if (isActive) {
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-xmark');
+            mobileMenuBtn.setAttribute('aria-label', 'Cerrar menú de navegación');
         } else {
             icon.classList.remove('fa-xmark');
             icon.classList.add('fa-bars');
+            mobileMenuBtn.setAttribute('aria-label', 'Abrir menú de navegación');
         }
-    });
+    };
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
 
     // Close mobile menu when a link is clicked
     navLinksItems.forEach(item => {
         item.addEventListener('click', () => {
             if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+                toggleMenu();
             }
         });
+    });
+
+    // Close menu with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            toggleMenu();
+            mobileMenuBtn.focus();
+        }
     });
 
 
@@ -35,11 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // --- Hero Parallax Effect ---
+    const hero = document.querySelector('.hero');
+    window.addEventListener('scroll', () => {
+        const scrollValue = window.scrollY;
+        if (scrollValue < window.innerHeight) {
+            hero.style.backgroundPositionY = `${scrollValue * 0.5}px`;
         }
     });
 

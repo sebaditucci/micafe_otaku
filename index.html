@@ -4,29 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Mi Café Otaku | Cafetería Temática y Café de Especialidad en Hurlingham</title>
-    <meta name="description" content="Descubre Mi Café Otaku en Hurlingham. La cafetería temática ideal para disfrutar del mejor café de especialidad, pastelería casera, lectura de mangas gratis y un ambiente otaku inigualable.">
-    <meta name="keywords" content="cafetería temática, café otaku, café de especialidad, mangas, anime, pastelería casera, Hurlingham, zona oeste, Buenos Aires, cafetería otaku">
+    <meta name="description"
+        content="Mi Café Otaku: El mejor café de especialidad y pastelería casera en Hurlingham. Biblioteca de mangas gratis, tardes de anime y un ambiente único. ¡Vení a visitarnos!">
+    <meta name="keywords"
+        content="cafetería temática, café otaku, café de especialidad, mangas, anime, pastelería casera, Hurlingham, zona oeste, Buenos Aires, cafetería otaku, Villa Tesei, café de especialidad Hurlingham">
     <meta name="author" content="Mi Café Otaku">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#d4a373">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://micafeotaku.com/">
     <meta property="og:title" content="Mi Café Otaku | Cafetería Temática en Hurlingham">
-    <meta property="og:description" content="Tu refugio otaku en zona oeste. Disfruta del mejor café de especialidad, lectura de mangas y tardes de anime.">
+    <meta property="og:description"
+        content="Tu refugio otaku en zona oeste. Disfruta del mejor café de especialidad, lectura de mangas y tardes de anime.">
     <meta property="og:image" content="https://micafeotaku.com/assets/portada.jpeg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://micafeotaku.com/">
     <meta property="twitter:title" content="Mi Café Otaku | Cafetería Temática en Hurlingham">
-    <meta property="twitter:description" content="Tu refugio otaku en zona oeste. Disfruta del mejor café de especialidad, lectura de mangas y tardes de anime.">
+    <meta property="twitter:description"
+        content="Tu refugio otaku en zona oeste. Disfruta del mejor café de especialidad, lectura de mangas y tardes de anime.">
     <meta property="twitter:image" content="https://micafeotaku.com/assets/portada.jpeg">
 
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="canonical" href="https://micafeotaku.com/" />
+<link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- Favicons: generate the files below and place in /assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,17 +48,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Scripts de terceros -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
 </head>
 
 <body>
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
     <!-- Navbar -->
-    <header class="navbar" id="navbar">
+    <header class="navbar" id="navbar" role="banner">
         <div class="nav-container">
             <a href="#" class="logo">
                 <img src="assets/logo.png" alt="Logo Mi Café Otaku" class="nav-logo"> Mi Café <span>Otaku</span>
             </a>
-            <nav class="nav-links">
+            <!-- SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Mi Café Otaku",
+  "description": "Cafetería temática otaku en Hurlingham, especializada en café de especialidad, ofreciendo biblioteca de mangas gratuita y cultura anime.",
+  "url": "https://micafeotaku.com/",
+  "logo": "https://micafeotaku.com/assets/logo.png",
+  "image": [
+    "https://micafeotaku.com/assets/portada.jpeg",
+    "https://micafeotaku.com/assets/foto_local.jpeg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Gdor. Vergara 2359",
+    "addressLocality": "Hurlingham",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "B1688",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.615,
+    "longitude": -58.627
+  },
+  "telephone": "+54 9 11 1234-5678",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "16:00",
+      "closes": "22:00"
+    }
+  ],
+  "servesCuisine": ["Café de especialidad", "Pastelería casera", "Taiyaki"],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/micafe_otaku",
+    "https://wa.me/1234567890"
+  ]
+}
+</script>
+
+<!-- Updated navigation with ARIA -->
+<nav class="nav-links" aria-label="Menú principal" role="navigation">
+
                 <a href="#about">Sobre el lugar</a>
                 <a href="#experience">Experiencia</a>
                 <a href="#delights">Nuestras Delicias</a>
@@ -55,11 +123,12 @@
                 <a href="#merch">Merch</a>
                 <a href="#contact" class="btn-nav">Reservar</a>
             </nav>
-            <button class="menu-toggle" id="mobile-menu-btn">
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </header>
+    <main id="main-content">
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -76,11 +145,11 @@
     </section>
 
     <!-- About Section -->
-    <section class="about section-padding" id="about">
+    <section class="about section-padding" id="about" aria-labelledby="about-title">
         <div class="container">
             <div class="about-grid">
                 <div class="about-text fade-in">
-                    <h2>Tu café de especialidad, <br>como en el <span class="highlight">living</span> de tu casa</h2>
+                    <h2 id="about-title">Tu café de especialidad, <br>como en el <span class="highlight">living</span> de tu casa</h2>
                     <p>En <strong>Mi Café Otaku</strong> creamos un espacio cálido, cuidado en cada detalle, para que te
                         sientas como en casa</p>
                     <p>Rendimos homenaje a nuestros animes favoritos (¡desde Chainsaw Man hasta los clásicos de
@@ -89,7 +158,7 @@
                     <ul class="about-features">
                         <li><i class="fa-solid fa-leaf"></i> Ambiente súper cálido y luminoso</li>
                         <li><i class="fa-solid fa-book"></i> Biblioteca de mangas gratuita a disposición</li>
-                        <li><i class="fa-solid fa-mug-hot"></i> Café en serio, para paladares exigentes</li>
+                        <li><i class="fa-solid fa-mug-hot"></i> Café de especialidad con alma otaku</li>
                     </ul>
                 </div>
                 <div class="about-image fade-in">
@@ -100,33 +169,33 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="experience section-padding bg-light" id="experience">
+    <section class="experience section-padding bg-light" id="experience" aria-labelledby="experience-title">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Lo que <span class="highlight">ofrecemos</span></h2>
+                <h2 id="experience-title">Lo que <span class="highlight">ofrecemos</span></h2>
                 <p>Ven a desconectar del día a día de la mejor manera.</p>
             </div>
             <div class="experience-cards">
-                <div class="exp-card fade-in">
+                <div class="exp-card fade-in stagger-1">
                     <div class="exp-icon"><i class="fa-solid fa-tv"></i></div>
                     <h3>Tardes de Anime</h3>
                     <p>Disfruta de nuestra pantalla donde a partir de las 18:30 transmitimos episodios clásicos o
                         estrenos corriendo de
                         fondo.</p>
                 </div>
-                <div class="exp-card fade-in">
+                <div class="exp-card fade-in stagger-2">
                     <div class="exp-icon"><i class="fa-solid fa-book-open"></i></div>
                     <h3>Lectura Tranquila</h3>
-                    <p>Agarra un volumen de My Hero Academia o de tu serie favorita de nuestra biblioteca y lee sin
+                    <p>Agarra un volumen de tu anime o manga favorito de nuestra biblioteca y lee sin
                         apuros.</p>
                 </div>
-                <div class="exp-card fade-in">
+                <div class="exp-card fade-in stagger-3">
                     <div class="exp-icon"><i class="fa-solid fa-cookie-bite"></i></div>
                     <h3>Pastelería Casera</h3>
                     <p>Cookies gigantes, budines y opciones dulces horneadas con el mismo cariño que le ponemos al café.
                     </p>
                 </div>
-                <div class="exp-card fade-in">
+                <div class="exp-card fade-in stagger-4">
                     <div class="exp-icon"><i class="fa-solid fa-mug-hot"></i></div>
                     <h3>Servicio de mate</h3>
                     <p>Podes venir y tomar mate, leer mangas, reír con amigos o solo, del modo que sea, siempre hay
@@ -137,51 +206,51 @@
     </section>
 
     <!-- Delights Showcase Section -->
-    <section class="delights section-padding" id="delights">
+    <section class="delights section-padding" id="delights" aria-labelledby="delights-title">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Nuestras <span class="highlight">Delicias</span></h2>
+                <h2 id="delights-title">Nuestras <span class="highlight">Delicias</span></h2>
                 <p>Acompaña tu lectura con nuestras opciones de pastelería y cafetería de especialidad.</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item fade-in">
-                    <img src="assets/nuestras_delicias_1.jpeg" alt="Nuestras Delicias 1">
+                <div class="gallery-item fade-in stagger-1">
+                    <img src="assets/nuestras_delicias_1.jpeg" alt="Café de especialidad acompañado de taiyaki, un brownie y un alfajor de maicena">
                     <div class="gallery-item-overlay">
                         <h3>Cafe con taiyaki, brownie y alfajor de maicena</h3>
                         <p>El taiyaki es un pastel japonés con forma de pez, apto para celíacos!
                         </p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/nuestras_delicias_2.jpeg" alt="Nuestras Delicias 2">
+                <div class="gallery-item fade-in stagger-2">
+                    <img src="assets/nuestras_delicias_2.jpeg" alt="Taza de café con leche servida junto a cookies recién horneadas">
                     <div class="gallery-item-overlay">
                         <h3>Café + cookies</h3>
                         <p>Excelente opción para los amantes de las galletitas</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/nuestras_delicias_3.jpeg" alt="Nuestras Delicias 3">
+                <div class="gallery-item fade-in stagger-3">
+                    <img src="assets/nuestras_delicias_3.jpeg" alt="Café servido directamente dentro de una galleta comestible">
                     <div class="gallery-item-overlay">
                         <h3>Café en galletita</h3>
                         <p>Buena e innovadora opción para dedicarse un rico momento</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/nuestras_delicias_4.jpeg" alt="Nuestras Delicias 4">
+                <div class="gallery-item fade-in stagger-1">
+                    <img src="assets/nuestras_delicias_4.jpeg" alt="Variedad de galletas temáticas decoradas con motivos de anime">
                     <div class="gallery-item-overlay">
                         <h3>Galletitas temáticas</h3>
                         <p>Tenemos opciones para todos los gustos</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/nuestras_delicias_5.jpeg" alt="Nuestras Delicias 5">
+                <div class="gallery-item fade-in stagger-2">
+                    <img src="assets/nuestras_delicias_5.jpeg" alt="Taza de café con leche con latte art en un ambiente acogedor">
                     <div class="gallery-item-overlay">
                         <h3>Café con leche</h3>
                         <p>Disfruta de un café con leche recién hecho, perfecto para acompañar tus lecturas.</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/nuestras_delicias_6.jpeg" alt="Nuestras Delicias 6">
+                <div class="gallery-item fade-in stagger-3">
+                    <img src="assets/nuestras_delicias_6.jpeg" alt="Pink Latte, una bebida saludable y vegana de color rosado">
                     <div class="gallery-item-overlay">
                         <h3>Pink Latte</h3>
                         <p>Excelente opción saludable y vegana. Vení a probarlo!!</p>
@@ -193,43 +262,43 @@
 
 
     <!-- Gallery Section -->
-    <section class="gallery section-padding" id="gallery">
+    <section class="gallery section-padding" id="gallery" aria-labelledby="gallery-title">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Nuestros <span class="highlight">Espacios</span></h2>
+                <h2 id="gallery-title">Nuestros <span class="highlight">Espacios</span></h2>
                 <p>Conoce los rincones de nuestro local llenos de detalles de tus animes favoritos.</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item fade-in">
-                    <img src="assets/espacios_1.jpeg" alt="Espacios 1">
+                    <img src="assets/espacios_1.jpeg" alt="Interior del café con estanterías de mangas y decoración temática de Chainsaw Man">
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="assets/espacios_2.jpeg" alt="Espacios 2">
+                    <img src="assets/espacios_2.jpeg" alt="Zona de lectura con luz natural, plantas y arte otaku en las paredes">
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="assets/espacios_3.jpeg" alt="Espacios 3">
+                    <img src="assets/espacios_3.jpeg" alt="Detalle de la biblioteca de mangas disponible para los clientes">
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="assets/espacios_4.jpeg" alt="Espacios 4">
+                    <img src="assets/espacios_4.jpeg" alt="Pantalla gigante donde se proyectan capítulos de anime para los clientes">
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="assets/espacios_5.jpeg" alt="Espacios 5">
+                    <img src="assets/espacios_5.jpeg" alt="Ambiente general del café con mesas de madera y atmósfera hogareña">
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="assets/espacios_6.jpeg" alt="Espacios 6">
+                    <img src="assets/espacios_6.jpeg" alt="Detalle decorativo de un personaje de anime en la estantería del café">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Merch Section -->
-    <section class="gallery section-padding bg-light" id="merch">
+    <section class="gallery section-padding bg-light" id="merch" aria-labelledby="merch-title">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Nuestro <span class="highlight">Merch</span></h2>
+                <h2 id="merch-title">Nuestro <span class="highlight">Merch</span></h2>
                 <p>Llevate un recuerdo de Mi Café Otaku a tu casa.</p>
             </div>
-            <div class="gallery-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="gallery-grid merch-grid">
                 <div class="gallery-item fade-in">
                     <img src="assets/merch_1.jpeg" alt="Merchandising 1">
                     <div class="gallery-item-overlay">
@@ -248,16 +317,18 @@
             </div>
         </div>
     </section>
-
+    <section class="elfsight-section" aria-label="Reseñas de clientes">
+        <div class="elfsight-app-6ab9918b-9166-4047-9e66-16d68782f053" data-elfsight-app-lazy></div>
+    </section>
     <!-- Contact Section / Footer -->
-    <section class="contact section-padding" id="contact">
+    <section class="contact section-padding" id="contact" role="contentinfo">
         <div class="container">
             <div class="contact-box fade-in">
                 <h2>Vení a sentirte como en <span class="highlight">casa</span></h2>
                 <p>¿Con ganas de pasar a visitarnos? Mandanos un mensaje para reservar tu mesa o consultar si tenemos
                     ese manga que quieres leer.</p>
 
-                <a href="https://wa.me/1234567890" target="_blank" class="btn-whatsapp-large">
+                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-large">
                     <i class="fa-brands fa-whatsapp"></i> Escribinos por WhatsApp
                 </a>
 
@@ -291,12 +362,16 @@
             </div>
         </div>
         <div class="footer-bottom">
+            <div class="seo-footer-text">
+                <p>Mi Café Otaku es la primera cafetería temática en Hurlingham (Villa Tesei), Zona Oeste. Nos especializamos en café de especialidad y pastelería casera, ofreciendo un refugio para la comunidad anime y manga en Buenos Aires.</p>
+            </div>
             <p>&copy; 2026 Mi Café Otaku. Todos los derechos reservados.</p>
         </div>
     </section>
+    </main>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/1234567890" target="_blank" class="floating-wa" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
